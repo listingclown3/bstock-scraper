@@ -9,6 +9,7 @@ this is 105% against bstock TOS but ¯\_(ツ)_/¯
 1. download the [chrome cookie downloader](https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg) (id: jcbpglbplpblnagieibnemmkiamekcdg)
 2. log into bstock and use the extension (it will copy your cookies into a json form to be pasted into cookies.json file) 
 - P.S you can delete the entire file contents in cookies.json and then paste the values in, (i.e delete the {}, then paste)
+- IMPORTANT: YOU MUST COPY THE COOKIES FROM THEIR RESPECTIVE SITES. IF YOU ARE PULLING CSV's FROM SUPERIOR COPY COOKIES FROM SUPERIOR, ETC OR IT WILL NOT WORK.
 3. go to bstock and go to one like superior wireless or gamestop
   - apply your filters which will change the URL
   - ex: https://bstock.com/gamestop/?carrier=161&condition=392&manufacturer=41
