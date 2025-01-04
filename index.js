@@ -50,7 +50,7 @@ const fetchHTMLAndSave = async (url, cookies) => {
     return response.data; // Return the HTML content for further processing
 
   } catch (error) {
-    console.error('Error fetching HTML:', error.message);
+    console.error('Error fetching HTML:', error);
   }
 };
 
@@ -184,7 +184,7 @@ const fetchDataWithCookies = async () => {
     const cookies = await readCookies();
 
     // Define the URL of the page that contains the CSV link
-    const url = bstockURL;
+    const url = bstockURL + `&mode=list`;
 
     // Fetch the HTML and save it to a file
     const html = await fetchHTMLAndSave(url, cookies);
