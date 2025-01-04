@@ -6,7 +6,7 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 require('dotenv').config();
 var date = new Date();
-var bstockURL = `https://bstock.com/superior/auction/auction/list/?condition=217&manufacturer=25`
+var bstockURL = `https://bstock.com/superior/auction/auction/list/?condition=217&manufacturer=25&mode=list`
 var auctionID;
 var auctionDetails;
 
