@@ -6,7 +6,7 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 require('dotenv').config();
 var date = new Date();
-var bstockURL = `https://bstock.com/superior/auction/auction/list/?condition=217&manufacturer=25`
+var bstockURL = ``
 var auctionID;
 var auctionDetails;
 
@@ -120,7 +120,7 @@ response.data.pipe(csv())
 
     // Define the CSV writer with headers based on your data structure
     const csvWriter = createCsvWriter({
-      path: `${date.toISOString().split('T')[0]}-${timeString}.csv`,
+      path: `./manifests/${date.toISOString().split('T')[0]}-${timeString}.csv`,
       header: Object.keys(results[0]).map(key => ({
         id: key,
         title: key
@@ -194,6 +194,9 @@ const fetchDataWithCookies = async () => {
 
     auctionID = extractAuctionIds(csvLink);
     auctionDetails = scrapeAuctionData(html, auctionID.ids);
+
+    fs.writeFileSync(`./auction_details/${date.toISOString().split('T')[0]}-${timeString}.json`, JSON.stringify(auctionDetails, null, 2), 'utf-8');
+    console.log(`Wrote auction IDs to ./auction_details/${date.toISOString().split('T')[0]}-${timeString}.json`)
 
     if (csvLink) {
       // Fetch and parse the CSV data from the extracted link
