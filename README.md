@@ -1,6 +1,10 @@
 # bstock-scraper
 Scrapes BStock iPhones on Superior Wireless Auctions to get the best deals
 
+# tos
+this is 105% against bstock TOS but ¯\_(ツ)_/¯
+- for the education!
+
 # how to use
 1. download the [chrome cookie downloader](https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg) (id: jcbpglbplpblnagieibnemmkiamekcdg)
 2. log into bstock and use the extension (it will copy your cookies into a json form to be pasted into cookies.json file) 
