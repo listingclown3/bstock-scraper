@@ -9,6 +9,10 @@ this is 105% against bstock TOS but ¯\_(ツ)_/¯
 1. download the [chrome cookie downloader](https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg) (id: jcbpglbplpblnagieibnemmkiamekcdg)
 2. log into bstock and use the extension (it will copy your cookies into a json form to be pasted into cookies.json file) 
 - P.S you can delete the entire file contents in cookies.json and then paste the values in, (i.e delete the {}, then paste)
+3. go to bstock and go to one like superior wireless or gamestop
+  - apply your filters which will change the URL
+  - ex: https://bstock.com/gamestop/?carrier=161&condition=392&manufacturer=41
+  - paste into the respective string in the code
 3. do npm run test
 4. files should be in the file system
 
