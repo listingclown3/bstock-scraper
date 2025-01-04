@@ -1,0 +1,30 @@
+{
+  "name": "bstock-scraper",
+  "version": "1.0.0",
+  "description": "Scrapes BStock for good iPhone deals and sends it to Discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/listingclown3/bstock-scraper.git"
+  },
+  "author": "listingclown3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/listingclown3/bstock-scraper/issues"
+  },
+  "homepage": "https://github.com/listingclown3/bstock-scraper#readme",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "csv-parser": "^3.1.0",
+    "csv-stringify": "^6.5.2",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.7",
+    "puppeteer": "^23.11.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
