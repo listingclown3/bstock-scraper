@@ -1,0 +1,2 @@
+This will show the manifests of each of the auctions
+Another placeholder - check auction_details

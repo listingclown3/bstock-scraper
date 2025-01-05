@@ -1,0 +1,2 @@
+Will show auction id's and their prices
+This is a placeholder so that the file is generated in GitHub so that it works out the box
