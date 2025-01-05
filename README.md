@@ -5,6 +5,12 @@ Scrapes BStock iPhones on Superior Wireless Auctions to get the best deals
 this is 105% against bstock TOS but ¯\_(ツ)_/¯
 - for the education!
 
+# this shit is buggy
+- gotta provide sudo apt shell to download all the dependenceis for python and nodejs, and then the chromeium image
+- gotta add the CloudFlare bypass repository so that it actually works
+- Gotta automate the system that creates the CSV system
+- Create a comping system (send a comp request from a discord bot, sent off to a server)
+
 # how to use
 1. download the [chrome cookie downloader](https://chromewebstore.google.com/detail/copy-cookies/jcbpglbplpblnagieibnemmkiamekcdg) (id: jcbpglbplpblnagieibnemmkiamekcdg)
 2. log into bstock and use the extension (it will copy your cookies into a json form to be pasted into cookies.json file) 
