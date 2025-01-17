@@ -30,8 +30,8 @@ async function login() {
     let page;
     try {
         // Read the CF cookie
-        const cookieData = JSON.parse(fs.readFileSync('cf_clearance_cookies.json'));
-        const cfCookie = cookieData['bstock.com'].cf_clearance;
+        const cookieData = JSON.parse(fs.readFileSync('./Cloudflare-Bypass/cf_clearance_cookies.json'));
+        const cfCookie = cookieData['bstock.com']['cf_clearance'];
 
         browser = await puppeteer.launch({
             headless: true,
@@ -155,15 +155,40 @@ async function login() {
 
         // Submit login
         console.log('Submitting login...');
-        await Promise.all([
-            page.click('button[type="submit"]'),
-            page.waitForNavigation({ 
-                waitUntil: ['networkidle0', 'domcontentloaded'],
-                timeout: 60000 
-            })
-        ]);
-        await takeScreenshot(page, '7_logged_in');
-        console.log('Login successful');
+        try {
+            // Click the login button
+            await page.click('button.ui.button.fluid.margin-top-1em');
+            
+            // Wait a few seconds for cookies to be set
+            console.log('Waiting for cookies to be set...');
+            await new Promise(resolve => setTimeout(resolve, 5000));
+
+            // Take screenshot before dumping cookies
+            console.log('Taking post-login screenshot...');
+            await takeScreenshot(page, 'post_login_state');
+            
+            // Dump cookies with additional logging
+            console.log('Attempting to dump cookies...');
+            const cookies = await page.cookies();
+            
+            if (!cookies || cookies.length === 0) {
+                console.log('Warning: No cookies found');
+            } else {
+                console.log(`Found ${cookies.length} cookies`);
+            }
+
+            fs.writeFileSync(
+                'cookies.json',
+                JSON.stringify(cookies, null, 2),
+                'utf-8'
+            );
+            console.log('Cookies successfully saved to cookies.json');
+
+        } catch (error) {
+            console.error('Error during login process:', error);
+            await takeScreenshot(page, 'login_error');
+            throw error;
+        }
 
         // Dump initial cookies
         console.log('Dumping initial cookies...');
