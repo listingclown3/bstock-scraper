@@ -13,19 +13,6 @@ var auctionDetails;
 const padTo2Digits = (num) => num.toString().padStart(2, '0');
 var timeString =  `${padTo2Digits(date.getHours())}:${padTo2Digits(date.getMinutes())}:${padTo2Digits(date.getSeconds())}`
 
-/* 
-
-TODO:
-
-1. use cookie extractor from /CloudFlare-Bypass/cookie_extractor.py
-2. extract the cookie and write to JSON file
-3. Test cookie functionality on the login page with Selenium
-4. Attempt login with Selenium
-5. Go to specific auction page then pull cookies and write to ./cookies.json
-6. Run index.js to scrape the auction page and pull the CSV link
-
-*/
-
 // Function to read cookies from the JSON file
 const readCookies = () => {
   return new Promise((resolve, reject) => {

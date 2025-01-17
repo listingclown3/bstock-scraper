@@ -16,13 +16,25 @@ if (!fs.existsSync(screenshotDir)) {
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function takeScreenshot(page, name) {
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const filename = path.join(screenshotDir, `${name}_${timestamp}.png`);
-    await page.screenshot({ 
-        path: filename,
-        fullPage: true 
-    });
-    console.log(`Screenshot saved: ${filename}`);
+    // More explicit check for screenshots being enabled
+    const screenshotsValue = process.env.SCREENSHOTS;
+    
+    if (!screenshotsValue || screenshotsValue.toLowerCase() !== 'true') {
+        console.log('Screenshots are disabled');
+        return;
+    }
+
+    try {
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        const filename = path.join(screenshotDir, `${name}_${timestamp}.png`);
+        await page.screenshot({ 
+            path: filename,
+            fullPage: true 
+        });
+        console.log(`Screenshot saved: ${filename}`);
+    } catch (error) {
+        console.error('Error taking screenshot:', error.message);
+    }
 }
 
 async function login() {

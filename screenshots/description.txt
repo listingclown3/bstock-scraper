@@ -1,0 +1,2 @@
+This will show the screenshots of each of the auction login step if enabled in .env
+Another placeholder - check manifests
