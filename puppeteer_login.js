@@ -30,7 +30,7 @@ async function login() {
     let page;
     try {
         // Read the CF cookie
-        const cookieData = JSON.parse(fs.readFileSync('./Cloudflare-Bypass/cf_clearance_cookies.json'));
+        const cookieData = JSON.parse(fs.readFileSync('./Cloudflare-Bypass-local/cf_clearance_cookies.json'));
         const cfCookie = cookieData['bstock.com']['cf_clearance'];
 
         browser = await puppeteer.launch({
