@@ -25,6 +25,7 @@
     "dotenv": "^16.4.7",
     "puppeteer": "^23.11.1",
     "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2"
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "chromium-browser": "1.1.0"
   }
 }
