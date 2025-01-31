@@ -25,6 +25,23 @@ this is 105% against bstock TOS but ¯\_(ツ)_/¯
 
 # errors
 - 403 error code probably means you messed up the authorization or you got blocked by CloudFlare (yikes, it happened to me)
+- if on aarch64 (uname -m)
+  sudo apt update
+  sudo apt install chromium-browser -y
+
+  add 
+  ```
+     const puppeteer = require('puppeteer-core');
+
+     const browser = await puppeteer.launch({
+        executablePath: '/usr/bin/chromium-browser', // Use installed Chromium
+        headless: true
+     });
+
+    or just the executablePath for the chrome browswer
+  ```
+
+
 
 # gamestop funky
 GameStop has a weird system of list view
