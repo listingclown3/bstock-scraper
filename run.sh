@@ -52,6 +52,7 @@ npx puppeteer browsers install chrome
 # CD into Cloudflare-Bypass-local and run cookie extractor
 echo "Extracting cookies..."
 cd Cloudflare-Bypass-local
+pip install -r requirements.txt
 python3 cookie_extractor.py
 
 # Check if cookie extractor was successful
