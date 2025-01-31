@@ -11,6 +11,7 @@ import uuid
 import subprocess
 import threading
 from dataclasses import dataclass
+from aqua import CF_Solver
 
 def get_and_save_cf_cookie():
     try:
