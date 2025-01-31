@@ -28,6 +28,7 @@ this is 105% against bstock TOS but ¯\_(ツ)_/¯
 - if on aarch64 (uname -m)
   sudo apt update
   sudo apt install chromium-browser -y
+- if you get an invalid link it's 105% your cookies are bad just saying.
 
   add 
   ```
