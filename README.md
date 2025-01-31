@@ -39,6 +39,16 @@ this is 105% against bstock TOS but ¯\_(ツ)_/¯
      });
 
     or just the executablePath for the chrome browswer
+
+    or on google-stable
+
+    const puppeteer = require('puppeteer-core');
+
+    const browser = await puppeteer.launch({
+      executablePath: '/usr/bin/google-chrome', // Change this if the path is different
+      headless: true
+    });
+
   ```
 
 
