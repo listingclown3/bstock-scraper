@@ -68,4 +68,5 @@ their auction history api is open which I assume is because you can view it publ
 https://bstock.com/superior/auction/auction/history/?isAjax=1&id=35625
 
 just GET request that with a valid auction id, etc. and if it exists
+additionally you can get it from 0 to the latest auction which I assume goes in number order. Therefore, one can mass pull data on the phones being sold assuming you get the auction ID and can generally know what product is being sold... interesting..
 
