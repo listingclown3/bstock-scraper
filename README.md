@@ -62,3 +62,10 @@ mode=list
 
 tldr; you have to set mode=list first then you are redirected which then you can use to extract data. probably has something to do with cookies but i'm not sure.
 
+# interesting note
+their auction history api is open which I assume is because you can view it publicly so here is an example
+
+https://bstock.com/superior/auction/auction/history/?isAjax=1&id=35625
+
+just GET request that with a valid auction id, etc. and if it exists
+
