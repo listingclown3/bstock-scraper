@@ -2,7 +2,7 @@
 Scrapes BStock inventory and extracts CSV files :)
 
 # DISCLAIMER
-doesn't work anything ;-;
+this code doesn't work anymore, new login stuff got changed...
 
 # tos
 this is 105% against bstock TOS but ¯\_(ツ)_/¯
